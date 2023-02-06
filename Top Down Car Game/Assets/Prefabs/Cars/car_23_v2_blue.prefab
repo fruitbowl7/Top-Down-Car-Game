@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5234897506077415995}
   - component: {fileID: 5234897506077415992}
   - component: {fileID: 5234897506077415993}
+  - component: {fileID: 1931585689}
   m_Layer: 0
   m_Name: car_23_v2_blue
   m_TagString: Untagged
@@ -111,3 +112,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4859588, y: 5.7609487}
   m_EdgeRadius: 0
+--- !u!114 &1931585689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5234897506077415990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3fe76dbe9d9e44a8a2727d75d93023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 5
+  _sideMoveSpeed: 9
