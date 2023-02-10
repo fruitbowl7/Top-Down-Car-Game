@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraControler : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     public GameObject ObjectToFollow;
-    public float FollowOffset = -7.4f;
+    public float FollowOffset = 0;
 
     // Start is called before the first frame update
     void Start()

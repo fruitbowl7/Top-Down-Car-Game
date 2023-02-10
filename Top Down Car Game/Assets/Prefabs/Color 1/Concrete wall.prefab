@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9005627843241555304}
   m_Layer: 0
   m_Name: Concrete wall
-  m_TagString: Obsticale
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
