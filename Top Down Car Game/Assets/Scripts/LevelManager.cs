@@ -1,7 +1,6 @@
-using System;
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
@@ -9,15 +8,16 @@ using TMPro;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
-
     public GameObject PausePanel;
     public GameObject GameOverPanel;
     public TextMeshProUGUI CoinCountText;
     public TextMeshProUGUI GasAmountText;
+    public TextMeshProUGUI CountDownTimerText;
 
-    [SerializedFeild] private int _coinsCollected = 0;
-    [SerializedFeild] private int _gasAmount = 10;
-    
+    private int _countDownTimer = 3;
+    [SerializeField] private int _coinsCollected = 0;
+    [SerializeField] private int _gasAmount = 10;
+     [SerializeField] private bool _isGameActive = false;
 
     void Awake() 
     {
@@ -30,6 +30,7 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 1;
         CoinCountText.text = _coinsCollected.ToString();
         GasAmountText.text = _gasAmount.ToString();
+        StartCoroutine(StartCountDownTimer());
     }
 
     // Update is called once per frame
@@ -37,6 +38,12 @@ public class LevelManager : MonoBehaviour
     {
         
     }
+
+    public bool StartGame()
+    {
+        _isGameActive = true;
+        return _isGameActive;
+     }
 
     public void GameOver()
     {
@@ -77,8 +84,23 @@ public class LevelManager : MonoBehaviour
         _gasAmount += amount;
         GasAmountText.text = _gasAmount.ToString();
     }
-}
 
-internal class SerializedFeildAttribute : Attribute
-{
+    IEnumerator StartCountDownTimer()
+    {
+        yield return new WaitForSeconds(0.25f);
+        CountDownTimerText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+
+        while(_countDownTimer > 0)
+        {
+            CountDownTimerText.text = _countDownTimer.ToString();
+            yield return new WaitForSeconds(1f);
+            _countDownTimer--; //_countDownTimer = _countDownTimer - 1;
+        }
+
+        CountDownTimerText.text = "GO!";
+        _isGameActive = true;
+        yield return new WaitForSeconds(1f);
+        CountDownTimerText.gameObject.SetActive(false);
+    }
 }

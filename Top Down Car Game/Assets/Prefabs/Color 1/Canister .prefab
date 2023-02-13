@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8353336234923050138}
   - component: {fileID: 8353336234923050085}
   - component: {fileID: 8353336234923050084}
+  - component: {fileID: 3109267189851625501}
   m_Layer: 0
   m_Name: 'Canister '
   m_TagString: Obstacle
@@ -111,3 +112,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5169604, y: 2.157761}
   m_EdgeRadius: 0
+--- !u!114 &3109267189851625501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8353336234923050087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95b80ea9c8dadc4e94c04ce89bfd6a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _value: 1

@@ -3,7 +3,12 @@ guid: 6bd973b04fa292746ac558ba1d029389
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - PausePanel: {fileID: 4480330593517405029, guid: e90bdf9ab4a729b4a8c8d698431f1f0f, type: 3}
+  - GameOverPanel: {instanceID: 0}
+  - CoinCountText: {instanceID: 0}
+  - GasAmountText: {instanceID: 0}
+  - CountDownTimerText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
