@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Obsticale
   - Obstacle
+  - Start Line
+  - Finish Line
+  - Gas Can
+  - Coin
   layers:
   - Default
   - TransparentFX

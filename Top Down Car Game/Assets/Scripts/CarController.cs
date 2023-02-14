@@ -49,11 +49,15 @@ public class CarController : MonoBehaviour
         }
     }
 
-    //private void OnTriggerEnter2D(Collider2D)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-      //  if(other.gameObject.CompareTag("Start line"))
+        if(other.gameObject.CompareTag("Start line"))
         {
-            //code here
+          LevelManager.Instance.StartGasMeter();
+        }
+        if(other.gameObject.CompareTag("Finish Line"))
+        {
+            //code here 
         }
     }
 }

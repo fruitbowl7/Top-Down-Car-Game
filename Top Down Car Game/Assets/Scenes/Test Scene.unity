@@ -1848,6 +1848,7 @@ MonoBehaviour:
   CountDownTimerText: {fileID: 65931884}
   _coinsCollected: 0
   _gasAmount: 10
+  _currentGasAmount: 10
   _isGameActive: 0
 --- !u!4 &667050384
 Transform:
@@ -3477,7 +3478,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1215129315
 GameObject:
@@ -3491,7 +3492,7 @@ GameObject:
   - component: {fileID: 1215129316}
   m_Layer: 0
   m_Name: Start line
-  m_TagString: Untagged
+  m_TagString: Start Line
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4413,7 +4414,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4531132768490432795, guid: 132c31363dbf9724fb79dad8c9f30243, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4531132768490432795, guid: 132c31363dbf9724fb79dad8c9f30243, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5426,7 +5427,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2058130922
 PrefabInstance:
@@ -5686,7 +5687,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7026905798180834283, guid: acc1216684dc1df4a893b8787c687e0a, type: 3}
       propertyPath: m_RootOrder
-      value: 43
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 7026905798180834283, guid: acc1216684dc1df4a893b8787c687e0a, type: 3}
       propertyPath: m_LocalPosition.x

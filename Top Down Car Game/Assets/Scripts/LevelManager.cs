@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class LevelManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class LevelManager : MonoBehaviour
     private int _countDownTimer = 3;
     [SerializeField] private int _coinsCollected = 0;
     [SerializeField] private int _gasAmount = 10;
+    [SerializeField] private int _currentGasAmount = 10;
      [SerializeField] private bool _isGameActive = false;
 
     void Awake() 
@@ -81,8 +83,22 @@ public class LevelManager : MonoBehaviour
 
     public void UpdateGasAmount(int amount)
     {
-        _gasAmount += amount;
-        GasAmountText.text = _gasAmount.ToString();
+       if(_currentGasAmount < _gasAmount)
+       {
+         _currentGasAmount += amount;
+        GasAmountText.text = _currentGasAmount.ToString();
+       }
+       
+    }
+
+    public void StartGasMeter()
+    {
+        StartCoroutine(UpdateGasMeter());
+    }
+
+    private void StartCoroutine(IEnumerable enumerable)
+    {
+        throw new NotImplementedException();
     }
 
     IEnumerator StartCountDownTimer()
@@ -102,5 +118,15 @@ public class LevelManager : MonoBehaviour
         _isGameActive = true;
         yield return new WaitForSeconds(1f);
         CountDownTimerText.gameObject.SetActive(false);
+    }
+    
+    IEnumerable UpdateGasMeter()
+    {
+        while(_currentGasAmount > 0)
+        {
+            yield return new WaitForSeconds(3f);
+            _currentGasAmount--;
+            GasAmountText.text = _currentGasAmount.ToString();
+        }
     }
 }
