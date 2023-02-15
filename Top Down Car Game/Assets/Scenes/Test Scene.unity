@@ -1845,10 +1845,10 @@ MonoBehaviour:
   GameOverPanel: {fileID: 807113110}
   CoinCountText: {fileID: 1779102340}
   GasAmountText: {fileID: 808089224}
-  CountDownTimerText: {fileID: 65931884}
+  CountdownTimerText: {fileID: 65931884}
   _coinsCollected: 0
   _gasAmount: 10
-  _currentGasAmount: 10
+  _currentGasAmount: 9
   _isGameActive: 0
 --- !u!4 &667050384
 Transform:
@@ -6432,11 +6432,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8016780571297948490, guid: 0a586eb6a703392469b72ac3cfef8009, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.95
+      value: -3.17
       objectReference: {fileID: 0}
     - target: {fileID: 8016780571297948490, guid: 0a586eb6a703392469b72ac3cfef8009, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40.759995
+      value: 36.64
       objectReference: {fileID: 0}
     - target: {fileID: 8016780571297948490, guid: 0a586eb6a703392469b72ac3cfef8009, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6493,7 +6493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6530584030843529015, guid: 2f67b6e92b1e0374f9b67b7966536049, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.33
+      value: -1.26
       objectReference: {fileID: 0}
     - target: {fileID: 6530584030843529015, guid: 2f67b6e92b1e0374f9b67b7966536049, type: 3}
       propertyPath: m_LocalPosition.y

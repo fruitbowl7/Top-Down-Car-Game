@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7026905798180834283}
   - component: {fileID: 7245819289133720764}
+  - component: {fileID: -5223926008980458556}
   m_Layer: 0
   m_Name: Hole 2
   m_TagString: Obstacle
@@ -84,3 +85,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &-5223926008980458556
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9047562892454860387}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.24, y: 2.51}
+  m_Direction: 0

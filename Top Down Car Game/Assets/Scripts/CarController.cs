@@ -5,8 +5,10 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 5f;
+     [SerializeField] private float _boostAmount = 20f;
     [SerializeField] private float _sideMoveSpeed = 5f;
     [SerializeField] private float _xRange = 4f;
+  
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,7 @@ public class CarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(LevelManager.Instance.StartGame())
+        if(LevelManager.Instance.StartGame())
         {
             CarMovement();
         }
@@ -25,7 +27,7 @@ public class CarController : MonoBehaviour
 
     private void CarMovement()
     {
-         float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
 
         transform.Translate(Vector3.up * _moveSpeed * Time.deltaTime);
         transform.Translate(Vector3.right * _sideMoveSpeed * horizontalInput * Time.deltaTime);
@@ -51,13 +53,26 @@ public class CarController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Start line"))
+        if(other.gameObject.CompareTag("Start Line"))
         {
-          LevelManager.Instance.StartGasMeter();
+            LevelManager.Instance.StartGasMeter();
         }
+
         if(other.gameObject.CompareTag("Finish Line"))
         {
-            //code here 
+            //code here
         }
+        if(other.gameObject.CompareTag("Boost"))
+        {
+          StartCoroutine(SetBoost());
+        }
+    }
+
+    IEnumerator SetBoost()
+    {
+       float currentSpeed = _moveSpeed; 
+       _moveSpeed = currentSpeed + _boostAmount;
+       yield return new WaitForSeconds(2f);
+       _moveSpeed = currentSpeed;
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
-using System;
 
 public class LevelManager : MonoBehaviour
 {
@@ -13,13 +12,13 @@ public class LevelManager : MonoBehaviour
     public GameObject GameOverPanel;
     public TextMeshProUGUI CoinCountText;
     public TextMeshProUGUI GasAmountText;
-    public TextMeshProUGUI CountDownTimerText;
+    public TextMeshProUGUI CountdownTimerText;
 
-    private int _countDownTimer = 3;
+    private int _countdownTimer = 3;
     [SerializeField] private int _coinsCollected = 0;
     [SerializeField] private int _gasAmount = 10;
-    [SerializeField] private int _currentGasAmount = 10;
-     [SerializeField] private bool _isGameActive = false;
+    [SerializeField] private int _currentGasAmount = 9;
+    [SerializeField] private bool _isGameActive = false;
 
     void Awake() 
     {
@@ -32,7 +31,7 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 1;
         CoinCountText.text = _coinsCollected.ToString();
         GasAmountText.text = _gasAmount.ToString();
-        StartCoroutine(StartCountDownTimer());
+        StartCoroutine(StartCountdownTimer());
     }
 
     // Update is called once per frame
@@ -43,9 +42,9 @@ public class LevelManager : MonoBehaviour
 
     public bool StartGame()
     {
-        _isGameActive = true;
+        //_isGameActive = true;
         return _isGameActive;
-     }
+    }
 
     public void GameOver()
     {
@@ -83,12 +82,11 @@ public class LevelManager : MonoBehaviour
 
     public void UpdateGasAmount(int amount)
     {
-       if(_currentGasAmount < _gasAmount)
-       {
-         _currentGasAmount += amount;
-        GasAmountText.text = _currentGasAmount.ToString();
-       }
-       
+        if(_currentGasAmount < _gasAmount)
+        {
+            _currentGasAmount += amount;
+            GasAmountText.text = _currentGasAmount.ToString();
+        } 
     }
 
     public void StartGasMeter()
@@ -96,31 +94,26 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(UpdateGasMeter());
     }
 
-    private void StartCoroutine(IEnumerable enumerable)
-    {
-        throw new NotImplementedException();
-    }
-
-    IEnumerator StartCountDownTimer()
+    IEnumerator StartCountdownTimer()
     {
         yield return new WaitForSeconds(0.25f);
-        CountDownTimerText.gameObject.SetActive(true);
+        CountdownTimerText.gameObject.SetActive(true);
         yield return new WaitForSeconds(1f);
 
-        while(_countDownTimer > 0)
+        while(_countdownTimer > 0)
         {
-            CountDownTimerText.text = _countDownTimer.ToString();
+            CountdownTimerText.text = _countdownTimer.ToString();
             yield return new WaitForSeconds(1f);
-            _countDownTimer--; //_countDownTimer = _countDownTimer - 1;
+            _countdownTimer--; // _countdownTimer = _countdownTimer - 1;
         }
 
-        CountDownTimerText.text = "GO!";
+        CountdownTimerText.text = "GO!";
         _isGameActive = true;
         yield return new WaitForSeconds(1f);
-        CountDownTimerText.gameObject.SetActive(false);
+        CountdownTimerText.gameObject.SetActive(false);
     }
-    
-    IEnumerable UpdateGasMeter()
+
+    IEnumerator UpdateGasMeter()
     {
         while(_currentGasAmount > 0)
         {
@@ -128,5 +121,7 @@ public class LevelManager : MonoBehaviour
             _currentGasAmount--;
             GasAmountText.text = _currentGasAmount.ToString();
         }
+
+        GameOver();
     }
 }

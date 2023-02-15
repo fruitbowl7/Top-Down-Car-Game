@@ -125,4 +125,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 5
+  _boostAmount: 10
   _sideMoveSpeed: 9
+  _xRange: 4
