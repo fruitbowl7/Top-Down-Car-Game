@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1931585689}
   m_Layer: 0
   m_Name: car_23_v2_blue
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,3 +128,4 @@ MonoBehaviour:
   _boostAmount: 10
   _sideMoveSpeed: 9
   _xRange: 4
+  _crossedFinishLine: 0
