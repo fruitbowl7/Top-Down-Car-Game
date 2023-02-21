@@ -52,6 +52,12 @@ public class LevelManager : MonoBehaviour
         GameOverPanel.SetActive(true);
     }
 
+    public void YouWon()
+    {
+        //Time.timeScale = 0;
+       // YouWonPanel.SetActive(true);
+    }
+
     public void ReplayButtonPressed()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
