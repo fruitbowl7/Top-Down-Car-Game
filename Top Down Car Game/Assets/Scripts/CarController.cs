@@ -5,11 +5,10 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 5f;
-     [SerializeField] private float _boostAmount = 20f;
+    [SerializeField] private float _boostAmount = 20f;
     [SerializeField] private float _sideMoveSpeed = 5f;
     [SerializeField] private float _xRange = 4f;
     [SerializeField] private bool _crossedFinishLine = false;
-  
 
     // Start is called before the first frame update
     void Start()
@@ -67,19 +66,19 @@ public class CarController : MonoBehaviour
         if(other.gameObject.CompareTag("Finish Line"))
         {
             _crossedFinishLine = true;
-            //talk to the camera controller
+            LevelManager.Instance.YouWon();
         }
         if(other.gameObject.CompareTag("Boost"))
         {
-          StartCoroutine(SetBoost());
+            StartCoroutine(SetBoost());
         }
     }
 
     IEnumerator SetBoost()
     {
-       float currentSpeed = _moveSpeed; 
-       _moveSpeed = currentSpeed + _boostAmount;
-       yield return new WaitForSeconds(2f);
-       _moveSpeed = currentSpeed;
+        float currentSpeed = _moveSpeed;
+        _moveSpeed = currentSpeed + _boostAmount;
+        yield return new WaitForSeconds(3f);
+        _moveSpeed = currentSpeed;
     }
 }
