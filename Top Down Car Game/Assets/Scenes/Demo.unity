@@ -138,13 +138,45 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2066683886577099272, guid: 3f00707cc70aad24fa9cd687d1cc9bf5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 394
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066683886642141564, guid: 3f00707cc70aad24fa9cd687d1cc9bf5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 132
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066683886642141564, guid: 3f00707cc70aad24fa9cd687d1cc9bf5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 825
+      objectReference: {fileID: 0}
     - target: {fileID: 2066683886643314285, guid: 3f00707cc70aad24fa9cd687d1cc9bf5, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2066683886772040398, guid: 3f00707cc70aad24fa9cd687d1cc9bf5, type: 3}
+      propertyPath: m_Name
+      value: 'You Won Panel  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066683886772040398, guid: 3f00707cc70aad24fa9cd687d1cc9bf5, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066683886894782140, guid: 3f00707cc70aad24fa9cd687d1cc9bf5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066683887109144388, guid: 3f00707cc70aad24fa9cd687d1cc9bf5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -95
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066683887818677624, guid: 3f00707cc70aad24fa9cd687d1cc9bf5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 521
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066683887818677624, guid: 3f00707cc70aad24fa9cd687d1cc9bf5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 819
       objectReference: {fileID: 0}
     - target: {fileID: 2066683887902374051, guid: 3f00707cc70aad24fa9cd687d1cc9bf5, type: 3}
       propertyPath: m_Pivot.x
@@ -283,6 +315,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &676769529 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2066683886894782131, guid: 3f00707cc70aad24fa9cd687d1cc9bf5, type: 3}
+  m_PrefabInstance: {fileID: 177457341}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &689285578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -295,6 +338,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 177457343}
     - target: {fileID: 7351722608584770436, guid: 936b5346a8260f444bf14d5f04456a88, type: 3}
+      propertyPath: YouWonPanel
+      value: 
+      objectReference: {fileID: 1970330688}
+    - target: {fileID: 7351722608584770436, guid: 936b5346a8260f444bf14d5f04456a88, type: 3}
       propertyPath: CoinCountText
       value: 
       objectReference: {fileID: 177457346}
@@ -306,6 +353,10 @@ PrefabInstance:
       propertyPath: GasAmountText
       value: 
       objectReference: {fileID: 177457345}
+    - target: {fileID: 7351722608584770436, guid: 936b5346a8260f444bf14d5f04456a88, type: 3}
+      propertyPath: GasMeterSlider
+      value: 
+      objectReference: {fileID: 676769529}
     - target: {fileID: 7351722608584770436, guid: 936b5346a8260f444bf14d5f04456a88, type: 3}
       propertyPath: CountdownTimerText
       value: 
@@ -381,7 +432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5234897506077415995, guid: f81c2aee26292314e85dc0c9bfe43870, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.558031
+      value: -7.16
       objectReference: {fileID: 0}
     - target: {fileID: 5234897506077415995, guid: f81c2aee26292314e85dc0c9bfe43870, type: 3}
       propertyPath: m_LocalPosition.z
@@ -519,6 +570,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66b1c37bd66509540948a18b55d261b0, type: 3}
+--- !u!1 &1970330688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2066683886772040398, guid: 3f00707cc70aad24fa9cd687d1cc9bf5, type: 3}
+  m_PrefabInstance: {fileID: 177457341}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &103072756724818981
 PrefabInstance:
   m_ObjectHideFlags: 0
