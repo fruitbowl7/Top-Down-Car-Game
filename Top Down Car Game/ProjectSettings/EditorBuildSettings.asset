@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 2a4ac0fe955cd9842b80f233629c1923
   - enabled: 1
-    path: Assets/Scenes/Test Scene.unity
+    path: Assets/Scenes/Corse 1.unity
     guid: 9c74798978dcfde4face5687000ef9e7
   m_configObjects: {}
