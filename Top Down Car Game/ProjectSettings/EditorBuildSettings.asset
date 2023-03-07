@@ -12,6 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 2a4ac0fe955cd9842b80f233629c1923
   - enabled: 1
+    path: Assets/Scenes/Game Mode.unity
+    guid: db4c8ed06eba33e4c93d72c1352ac93c
+  - enabled: 1
     path: Assets/Scenes/Corse 1.unity
     guid: 9c74798978dcfde4face5687000ef9e7
+  - enabled: 1
+    path: Assets/Scenes/Corse 2.unity
+    guid: 7fe78c377e33e5747bc4f57a7d27a095
+  - enabled: 1
+    path: Assets/Scenes/Corse 3.unity
+    guid: 32598ca1afde97847a0cebe229737b21
+  - enabled: 1
+    path: Assets/Scenes/Single Race.unity
+    guid: b313b6a16f1a29e4db00e5b7936c5323
   m_configObjects: {}
