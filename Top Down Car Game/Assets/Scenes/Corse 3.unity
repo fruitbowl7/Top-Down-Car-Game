@@ -3041,7 +3041,7 @@ PrefabInstance:
       objectReference: {fileID: 468098274}
     - target: {fileID: 2088822366097415050, guid: 32bb8dcc37eebf74fba4f342b8e0d766, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReplayButtonPressed
+      value: GoToNextCorse
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32bb8dcc37eebf74fba4f342b8e0d766, type: 3}

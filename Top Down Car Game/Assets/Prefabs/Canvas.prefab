@@ -1306,7 +1306,7 @@ GameObject:
   - component: {fileID: 2088822364843722437}
   - component: {fileID: 2088822364843722436}
   m_Layer: 5
-  m_Name: Coin text
+  m_Name: Coin Count Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2175,7 +2175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: READY
+  m_text: CORSE 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3ccb66f7dccd97479b9c53340ee36f1, type: 2}
   m_sharedMaterial: {fileID: 958824698448987821, guid: a3ccb66f7dccd97479b9c53340ee36f1, type: 2}
@@ -3411,7 +3411,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -9, y: 19.053406}
-  m_SizeDelta: {x: 183, y: 179}
+  m_SizeDelta: {x: 123, y: 188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2088822365752232190
 CanvasRenderer:
@@ -3441,7 +3441,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 222124dfb2214734884215b92571a1ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8dfba84547c1e08469e985b93cd198c4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4550,7 +4550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2088822365877201270
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5496,7 +5496,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b1229cdfa88939e48abe8fbb7a4f6efe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7ad8674f986e284fb23d686acf0a376, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5552,7 +5552,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: ReplayButtonPressed
+        m_MethodName: GoToNextCorse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

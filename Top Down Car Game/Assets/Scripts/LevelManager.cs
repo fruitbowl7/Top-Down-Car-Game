@@ -69,6 +69,18 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void GoToNextCorse()
+    {
+        int currentSceneIndex;
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+
+    public void CupComplete()
+    {
+       // SceneManager.LoadScene()
+    }
+
     public void HomeButtonPressed()
     {
         SceneManager.LoadScene("Main Menu");
