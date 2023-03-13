@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     [SerializeField] private int _coinCount = 0;
+    [SerializeField] private int _bestDistance = 0;
 
     public int amount { get; private set; }
 
@@ -45,4 +46,17 @@ public class GameManager : MonoBehaviour
     {
         return _coinCount;
     }
-}
+
+    public void SetBestDistanceTraveled(float amount)
+    {
+        if(_bestDistance < amount)
+        {
+            _bestDistance = (int)amount;
+        }
+    }
+
+    public float GetBestDistanceTraveled()
+    {
+        return _bestDistance;
+    }
+} 
